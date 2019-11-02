@@ -8,16 +8,25 @@
     <title>Tine dice...</title>
 </head>
 <body>
-    <div class="encabezado">
+    <div class="container">
+        <div class="encabezado">
+            <h3 id="fecha"></h3>
             <h1>TINE dice...</h1>
-    </div>
-    <div class="contendor">
-        <div class="gameboard">
-            <div id="celeste" class="color celeste left" data-color="celeste"></div>
-            <div id="violeta" class="color violeta right" data-color="violeta"></div>
-            <div id="naranja" class="color naranja left" data-color="naranja"></div>
-            <div id="verde" class="color verde right" data-color="verde"></div>
-            <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+            <h3>Nivel: <span id="nivel">0</span></h3>
+        </div>
+        <div class="contenedor">
+            <div class="gameboard">
+                <div id="celeste" class="color celeste left" data-color="celeste"></div>
+                <div id="violeta" class="color violeta right" data-color="violeta"></div>
+                <div id="naranja" class="color naranja left" data-color="naranja"></div>
+                <div id="verde" class="color verde right" data-color="verde"></div>
+                <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+            </div>
+        </div>
+        <div class="footer">
+            <a href="https://www.facebook.com/tinemnes">
+                TINE :: Tratamientos Integrales en Necesidades Específicas
+            </a>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>

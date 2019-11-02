@@ -2,17 +2,130 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-  .encabezado {
-    width: 100%;
-    text-align: center;
-  }
+a {
+  text-decoration: none;
+}
 
-  .contenedor {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    background: #dedede;
-    height: 100vh;
+body {
+  background-color: #c1fafa8c;
+  background-image: url('./img/2726.jpg');
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: 15% 75% 10%;
+  height: 100vh;
+  /* width: 100vw; */
+}
+
+.encabezado {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  align-items: baseline;
+  width: 100%;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.encabezado h3 {
+  font-size: .9em;
+}
+
+.contenedor {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  /* background: #dedede; */
+  /* height: 100vh; */
+  width: 100vw;
+}
+
+.gameboard {
+  height: 100vh;
+  width: 100vh;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  max-height: 60vh;
+  max-width: 60vh;
+}
+
+.color {
+  width: 50%;
+  height: 50%;
+  display: inline-block;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: left;
+}
+
+.celeste {
+  background: #22a6b3;
+}
+
+.celeste.light {
+  background: #7ed6df;
+}
+
+.violeta {
+  background: #be2edd;
+}
+
+.violeta.light {
+  background: #e056fd;
+}
+
+.naranja {
+  background: #f0932b;
+}
+
+.naranja.light {
+  background: #ffbe76;
+}
+
+.verde {
+  background: #6ab04c;
+}
+
+.verde.light {
+  background: #badc58;
+}
+
+.btn-start {
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  background: #ecf0f1;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  position: absolute;
+  top: calc(50% - 38px);
+  left: calc(50% - 163px);
+}
+
+.hide {
+  display: none;
+}
+.footer {
+  margin: 10px auto;
+  text-align: center;
+  font-size: .8em;
+}
+
+@media (min-width: 600px) {
+  .encabezado h3 {
+    font-size: 1em;
   }
 
   .gameboard {
@@ -21,54 +134,8 @@
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
-    max-height: 60vh;
-    max-width: 60vh;
-  }
-
-  .color {
-    width: 50%;
-    height: 50%;
-    display: inline-block;
-  }
-
-  .left {
-    float: left;
-  }
-
-  .right {
-    float: left;
-  }
-
-  .celeste {
-    background: #22a6b3;
-  }
-
-  .celeste.light {
-    background: #7ed6df;
-  }
-
-  .violeta {
-    background: #be2edd;
-  }
-
-  .violeta.light {
-    background: #e056fd;
-  }
-
-  .naranja {
-    background: #f0932b;
-  }
-
-  .naranja.light {
-    background: #ffbe76;
-  }
-
-  .verde {
-    background: #6ab04c;
-  }
-
-  .verde.light {
-    background: #badc58;
+    max-height: 70vh;
+    max-width: 70vh;
   }
 
   .btn-start {
@@ -78,10 +145,15 @@
     color: #2c3e50;
     font-size: 2.5rem;
     position: absolute;
-    top: calc(42% - 50px);
-    left: calc(50% - 207px);
+    top: calc(50% - 38px);
+    left: calc(50% - 206px);
   }
 
-  .hide {
-    display: none;
+  .footer {
+    margin: 10px auto;
+    text-align: center;
+    align-self: center;
+    font-size: .9em;
   }
+  
+}

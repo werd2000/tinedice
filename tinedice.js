@@ -18,6 +18,7 @@ class Juego {
         this.elegirColor = this.elegirColor.bind(this);
         this.toogleBtnEmpezar();
         this.nivel = 1;
+        this.mostrarNivel();
         this.colores = {
             celeste,
             violeta,
@@ -40,6 +41,7 @@ class Juego {
 
     siguienteNivel() {
         this.subnivel = 0;
+        this.mostrarNivel();
         this.iluminarSecuencia();
         this.agregarEventosClick();
     }
@@ -133,6 +135,9 @@ class Juego {
     }
 
     ganoElJuego() {
+        this.audio('gano.mp3');
+        this.nivel = 0;
+        this.mostrarNivel();
         swal('Tine', 'Felicitaciones ganaste el juego!', 'success' )
         .then (() => {
             this.inicializar();
@@ -140,15 +145,34 @@ class Juego {
     }
 
     perdioElJuego() {
+        this.audio('perdio.mp3');
+        this.nivel = 0;
+        this.mostrarNivel();
         swal('Tine', 'Huy que macana perdiste el juego :(', 'error' )
         .then (() => {
             this.eliminarEventosClick();    
             this.inicializar();
         })
     }
+
+    mostrarNivel() {
+        const spanNivel = document.getElementById('nivel');
+        spanNivel.innerText = this.nivel;
+    }
+
+    
+    audio(sound) {
+        var audio = new Audio();
+        audio.src = './sound/' + sound;
+        audio.play();
+    }
 }
 
 function empezarJuego() {
- window.juego = new Juego();   
+    window.juego = new Juego();   
 }
 
+window.addEventListener('load', function() {
+    const fecha = document.getElementById('fecha');
+    fecha.innerText = new Date().toLocaleDateString();
+})
